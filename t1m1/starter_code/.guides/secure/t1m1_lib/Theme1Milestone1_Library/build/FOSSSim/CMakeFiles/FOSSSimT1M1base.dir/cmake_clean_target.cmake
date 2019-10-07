@@ -1,3 +1,0 @@
-FILE(REMOVE_RECURSE
-  "libFOSSSimT1M1base.a"
-)
