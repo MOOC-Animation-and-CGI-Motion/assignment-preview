@@ -1,0 +1,9 @@
+
+<scene>
+  <simtype type="stable-fluids"/>
+  <description text="Velocity field pattern test"/>
+  <velocityfieldpattern code="8"/>
+  <duration time="0.3"/>
+  <diffusion diff="0.0001"/>
+  <viscosity visc="0.00000001"/>
+</scene>

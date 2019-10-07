@@ -1,0 +1,21 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A single rigid body with no forces, no momentum. Should complete a single rotation in 2 seconds; intended as a test of angular momentum."/>
+  <viewport cx="0.0" cy="0.0" size="2.1"/>
+  <maxsimfreq max="100.0"/>
+  <duration time="4.0"/>
+  
+  <rigidbodyintegrator type="symplectic-euler" dt="0.01"/>
+
+  <!--Total mass = 6. Center of mass = <0,0>. I = 53/4.-->
+  <rigidbodyvertex x="-0.5" y="-2.0" m="0.5"/>
+  <rigidbodyvertex x="-0.5" y=" 0.0" m="1"/>
+  <rigidbodyvertex x="-1.5" y=" 0.0" m="1"/>
+  <rigidbodyvertex x=" 0.0" y=" 2.0" m="1"/>
+  <rigidbodyvertex x=" 1.5" y=" 0.0" m="1"/>
+  <rigidbodyvertex x=" 0.5" y=" 0.0" m="1"/>
+  <rigidbodyvertex x=" 0.5" y="-2.0" m="0.5"/>
+
+  <rigidbody p="0" p="1" p="2" p="3" p="4" p="5" p="6" vx="0.0" vy="0.0" omega="3.14159" r="0.1"/>
+
+</scene>

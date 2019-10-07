@@ -1,0 +1,51 @@
+<scene>
+  <simtype type="joint-motor-body"/>
+  <description text="Trick or Treat Ultimate: The robot needs to find its way to the moving candy."/>
+
+  <maxsimfreq max="100.0"/>
+  <duration time="300.0"/>
+  <viewport cx="-1.0" cy="5.0" size="6.0"/>
+  
+  <rigidbodyintegrator type="symplectic-euler" dt="0.01"/>
+
+  <rigidbodycollisionhandling detection="ground"/>
+
+  <rigidbodygravityforce fx="0" fy="-1.0"/>
+  
+  <!-- detectors -->
+  <detector type="mr-treat" jointmotorbody="0" treatrb="2"/>
+  <detector type="mr-treat" jointmotorbody="0" treatrb="3"/>
+  <detector type="mr-treat" jointmotorbody="0" treatrb="4"/>
+  <detector type="mr-balance" jointmotorbody="0" duration="-1"/>
+
+  <!-- link 0: head -->
+  <rigidbodyvertex x="0.25"  y="3.25" m="1"/>
+  <rigidbodyvertex x="-0.25"  y="3.25" m="1"/>
+  <rigidbodyvertex x="-0.25"  y="2.75" m="1"/>
+  <rigidbodyvertex x="0.25"  y="2.75" m="1"/>
+  <rigidbody p="0" p="1" p="2" p="3" vx="0.0" vy="0.0" omega="0.0" r="0.04"/>
+
+  <!-- link 1: foot -->
+  <rigidbodyvertex x="0.0"  y="1.0" m="0.1"/>
+  <rigidbody p="4" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <jointmotorbody type="monopod-robot">
+  	<legspring k="100" l0="2" l0min="1" l0max="3" b="2.0"/>
+  	<link body="0" parent="-1" axisx="0" axisy="0"/>
+  	<link body="1" parent="0"  axisx="0" axisy="3"/>
+  </jointmotorbody>
+  
+  <rigidbodyvertex x="-3.0" y="5.0" m="1"/>
+  <rigidbody p="5" vx="1.0" vy="0.0" omega="-1.4" r="0.4" tag="treat_of_trick_or_treat"/>
+
+  <rigidbodyspringforce i="-1" pix="-3.0" piy="7.0" j="2" pjx="0.0" pjy="0.0" k="100.0" l0="2.0" b="1.0"/>
+
+  <rigidbodyvertex x="3.0" y="5.0" m="1"/>
+  <rigidbody p="6" vx="-1.5" vy="0.0" omega="-0.4" r="0.4" tag="treat_of_trick_or_treat"/>
+
+  <rigidbodyspringforce i="-1" pix="3.0" piy="6.0" j="3" pjx="0.0" pjy="0.0" k="100.0" l0="1.0" b="1.0"/>
+
+  <rigidbodyvertex x="1.0" y="8.0" m="1"/>
+  <rigidbody p="7" vx="0.0" vy="0.0" omega="2.4" r="0.3" tag="treat_of_trick_or_treat"/>
+
+</scene>

@@ -1,0 +1,48 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A simple rigid-body catapult. The square on the right should fall on the lever to send the left square flying into the air; this left square travels mostly vertically with slight spin."/>
+  <!--<viewport cx="1.0" cy="0.0" size="2.1"/>-->
+  <maxsimfreq max="100000000.0"/>
+  <duration time="10.0"/>
+
+  <rigidbodyintegrator type="symplectic-euler" dt="0.001"/>
+
+  <rigidbodycollisionhandling detection="all-pairs" response="lcp"/>
+
+  <!-- Rigid body serving as a 'table' -->
+  <rigidbodyvertex x="0.0" y="0.0" m="1"/>
+  <rigidbodyvertex x="0.0" y="2.0" m="1"/>
+  <rigidbodyvertex x="6.0" y="2.0" m="1"/>
+  <rigidbodyvertex x="6.0" y="0.0" m="1"/>
+  <rigidbody p="0" p="1" p="2" p="3" vx="0.0" vy="0.0" omega="0.0" r="0.1" fixed="1"/>
+
+  <!-- 'Arm' of the catapult -->
+  <rigidbodyvertex x="4.0" y="2.2" m="1"/>
+  <rigidbodyvertex x="4.0" y="3.2" m="1"/>
+  <rigidbodyvertex x="9.0" y="3.2" m="1"/>
+  <rigidbodyvertex x="9.0" y="2.2" m="1"/>
+  <rigidbody p="4" p="5" p="6" p="7" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <!-- 'Block' we will launch into the air -->
+  <rigidbodyvertex x="3.5" y="3.4" m="1"/>
+  <rigidbodyvertex x="3.5" y="4.4" m="1"/>
+  <rigidbodyvertex x="4.5" y="4.4" m="1"/>
+  <rigidbodyvertex x="4.5" y="3.4" m="1"/>
+  <rigidbody p="8" p="9" p="10" p="11" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <!-- 'Block' that will hit the end of the catapult -->
+  <rigidbodyvertex x="8.5" y="10.0" m="100.0"/>
+  <rigidbodyvertex x="8.5" y="11.0" m="100.0"/>
+  <rigidbodyvertex x="9.5" y="11.0" m="100.0"/>
+  <rigidbodyvertex x="9.5" y="10.0" m="100.0"/>
+  <rigidbody p="12" p="13" p="14" p="15" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+
+  <rigidbodygravityforce fx="0.0" fy="-10.0"/>
+
+<!--
+  <rigidbodyspringforce i="1" pix="1.0"  piy="1.0" j="-1" pjx="2.0" pjy="2.0" k="1000.0" l0="0.0"/>
+  <rigidbodyspringforce i="1" pix="-1.0" piy="1.0" j="-1" pjx="0.0" pjy="2.0" k="1000.0" l0="0.0"/>
+-->
+
+</scene>

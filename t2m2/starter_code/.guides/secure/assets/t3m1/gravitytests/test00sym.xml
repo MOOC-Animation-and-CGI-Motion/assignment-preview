@@ -1,0 +1,17 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A rigid body starting at rest and falling under gravity. The rigid body should traverse the screen in roughly 4 seconds and experience no angular acceleration about its center of mass. Intended as a simple benchmark against an analytical result."/>
+  <viewport cx="8.0" cy="0.0" size="9.1"/>
+  <duration time="4.0"/>
+  
+  <rigidbodyintegrator type="symplectic-euler" dt="0.01"/>
+
+  <rigidbodyvertex x="-1.0" y="-1.0" m="1"/>
+  <rigidbodyvertex x="-1.0" y=" 1.0" m="1"/>
+  <rigidbodyvertex x=" 1.0" y=" 1.0" m="1"/>
+  <rigidbodyvertex x=" 1.0" y="-1.0" m="1"/>
+
+  <rigidbody p="0" p="1" p="2" p="3" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+  <rigidbodygravityforce fx="2.0" fy="0.0"/>
+
+</scene>

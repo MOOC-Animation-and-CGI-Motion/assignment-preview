@@ -1,0 +1,94 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A cantilever constructed from rigid bodies and springs. Intended as a test of multiple rigid bodies and multiple forces."/>
+  <duration time="20.0"/>
+  <maxsimfreq max="500000.0"/>
+  <viewport cx="5.4" cy="0.0" size="5.6"/>
+
+  <rigidbodyintegrator type="symplectic-euler" dt="0.001"/>
+
+  <!-- First rigid body -->
+  <rigidbodyvertex x="0" y="0" m="1"/>
+  <rigidbodyvertex x="2" y="0" m="1"/>
+  <rigidbodyvertex x="2" y="1" m="1"/>
+  <rigidbodyvertex x="0" y="1" m="1"/>
+  <rigidbody p="0" p="1" p="2" p="3" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+  <!-- Second rigid body -->
+  <rigidbodyvertex x="2.2" y="0" m="1"/>
+  <rigidbodyvertex x="4.2" y="0" m="1"/>
+  <rigidbodyvertex x="4.2" y="1" m="1"/>
+  <rigidbodyvertex x="2.2" y="1" m="1"/>
+  <rigidbody p="4" p="5" p="6" p="7" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+  <!-- Third rigid body -->
+  <rigidbodyvertex x="4.4" y="0" m="1"/>
+  <rigidbodyvertex x="6.4" y="0" m="1"/>
+  <rigidbodyvertex x="6.4" y="1" m="1"/>
+  <rigidbodyvertex x="4.4" y="1" m="1"/>
+  <rigidbody p="8" p="9" p="10" p="11" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+  <!-- Fourth rigid body -->
+  <rigidbodyvertex x="6.6" y="0" m="1"/>
+  <rigidbodyvertex x="8.6" y="0" m="1"/>
+  <rigidbodyvertex x="8.6" y="1" m="1"/>
+  <rigidbodyvertex x="6.6" y="1" m="1"/>
+  <rigidbody p="12" p="13" p="14" p="15" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+  <!-- Fifth rigid body -->
+  <rigidbodyvertex x="8.8"  y="0" m="1"/>
+  <rigidbodyvertex x="10.8" y="0" m="1"/>
+  <rigidbodyvertex x="10.8" y="1" m="1"/>
+  <rigidbodyvertex x="8.8"  y="1" m="1"/>
+  <rigidbody p="16" p="17" p="18" p="19" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <!-- Spring forces pinning the first rigid body in place -->
+  <rigidbodyspringforce i="-1" pix="0.0" piy="1.0" j="0" pjx="-1.0" pjy="0.5"  k="1900000.0" l0="0.0"/>
+  <rigidbodyspringforce i="-1" pix="0.0" piy="0.0" j="0" pjx="-1.0" pjy="-0.5" k="1900000.0" l0="0.0"/>
+  <rigidbodyspringforce i="-1" pix="2.0" piy="1.0"  j="0" pjx="1.0" pjy="0.5"  k="1900000.0" l0="0.0"/>
+  <rigidbodyspringforce i="-1" pix="2.0" piy="0.0"  j="0" pjx="1.0" pjy="-0.5" k="1900000.0" l0="0.0"/>
+
+  <!-- Spring forces connecting the first and second rigid body -->
+  <rigidbodyspringforce i="0" pix="0.9" piy="0.4"  j="1" pjx="-0.9" pjy="0.4"  k="2000.0" l0="0.4"/>
+  <rigidbodyspringforce i="0" pix="0.9" piy="-0.4" j="1" pjx="-0.9" pjy="-0.4" k="2000.0" l0="0.4"/>
+  <rigidbodyspringforce i="0" pix="0.9" piy="0.4"  j="1" pjx="-0.9" pjy="-0.4" k="2000.0" l0="0.89442719099991597"/>
+  <rigidbodyspringforce i="0" pix="0.9" piy="-0.4" j="1" pjx="-0.9" pjy="0.4"  k="2000.0" l0="0.89442719099991597"/>
+
+  <!-- Spring forces connecting the second and third rigid body -->
+  <rigidbodyspringforce i="1" pix="0.9" piy="0.4"  j="2" pjx="-0.9" pjy="0.4"  k="2000.0" l0="0.4"/>
+  <rigidbodyspringforce i="1" pix="0.9" piy="-0.4" j="2" pjx="-0.9" pjy="-0.4" k="2000.0" l0="0.4"/>
+  <rigidbodyspringforce i="1" pix="0.9" piy="0.4"  j="2" pjx="-0.9" pjy="-0.4" k="2000.0" l0="0.89442719099991597"/>
+  <rigidbodyspringforce i="1" pix="0.9" piy="-0.4" j="2" pjx="-0.9" pjy="0.4"  k="2000.0" l0="0.89442719099991597"/>
+
+  <!-- Spring forces connecting the third and fourth rigid body -->
+  <rigidbodyspringforce i="2" pix="0.9" piy="0.4"  j="3" pjx="-0.9" pjy="0.4"  k="2000.0" l0="0.4"/>
+  <rigidbodyspringforce i="2" pix="0.9" piy="-0.4" j="3" pjx="-0.9" pjy="-0.4" k="2000.0" l0="0.4"/>
+  <rigidbodyspringforce i="2" pix="0.9" piy="0.4"  j="3" pjx="-0.9" pjy="-0.4" k="2000.0" l0="0.89442719099991597"/>
+  <rigidbodyspringforce i="2" pix="0.9" piy="-0.4" j="3" pjx="-0.9" pjy="0.4"  k="2000.0" l0="0.89442719099991597"/>
+
+  <!-- Spring forces connecting the third and fourth rigid body -->
+  <rigidbodyspringforce i="3" pix="0.9" piy="0.4"  j="4" pjx="-0.9" pjy="0.4"  k="2000.0" l0="0.4"/>
+  <rigidbodyspringforce i="3" pix="0.9" piy="-0.4" j="4" pjx="-0.9" pjy="-0.4" k="2000.0" l0="0.4"/>
+  <rigidbodyspringforce i="3" pix="0.9" piy="0.4"  j="4" pjx="-0.9" pjy="-0.4" k="2000.0" l0="0.89442719099991597"/>
+  <rigidbodyspringforce i="3" pix="0.9" piy="-0.4" j="4" pjx="-0.9" pjy="0.4"  k="2000.0" l0="0.89442719099991597"/>
+
+  <rigidbodygravityforce fx="0.0" fy="-1.0"/>
+
+
+  <rigidbodycolor body="0" r="0.6" g="0.2" b="0.0"/>
+  <rigidbodycolor body="1" r="0.0" g="0.4" b="0.0"/>
+  <rigidbodycolor body="2" r="0.6" g="0.2" b="0.8"/>
+  <rigidbodycolor body="3" r="0.5" g="0.3" b="0.0"/>
+
+  <rigidbodyspringcolor spring="4" r="0.2" g="0.0" b="0.8"/>
+  <rigidbodyspringcolor spring="5" r="0.2" g="0.0" b="0.8"/>
+  <rigidbodyspringcolor spring="6" r="0.2" g="0.0" b="0.8"/>
+  <rigidbodyspringcolor spring="7" r="0.2" g="0.0" b="0.8"/>
+
+  <rigidbodyspringcolor spring="8"  r="0.8" g="0.0" b="0.8"/>
+  <rigidbodyspringcolor spring="9"  r="0.8" g="0.0" b="0.8"/>
+  <rigidbodyspringcolor spring="10" r="0.8" g="0.0" b="0.8"/>
+  <rigidbodyspringcolor spring="11" r="0.8" g="0.0" b="0.8"/>
+
+  <rigidbodyspringcolor spring="12" r="0.8" g="0.8" b="0.0"/>
+  <rigidbodyspringcolor spring="13" r="0.8" g="0.8" b="0.0"/>
+  <rigidbodyspringcolor spring="14" r="0.8" g="0.8" b="0.0"/>
+  <rigidbodyspringcolor spring="15" r="0.8" g="0.8" b="0.0"/>
+  
+</scene>

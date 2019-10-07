@@ -1,0 +1,46 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="ROSI Figure 8 top"/>
+  <!--<viewport cx="1.0" cy="0.0" size="2.1"/>-->
+  <maxsimfreq max="100.0"/>
+  <duration time="2.0"/>
+ 
+  <rigidbodyintegrator type="symplectic-euler" dt="0.005"/>
+
+  <rigidbodycollisionhandling detection="all-pairs" response="gr-lcp"/>
+
+  <!--bounding box-->
+  <rigidbodyvertex x="-1" y="1" m="0.25"/>
+  <rigidbodyvertex x="-1" y="-1" m="0.25"/>
+  <rigidbodyvertex x="1" y="-1" m="0.25"/>
+  <rigidbodyvertex x="1" y="1" m="0.25"/>
+  <rigidbody p="0" p="1" p="2" p="3" vx="0" vy="0" omega="0" r="0.01" fixed="1" />
+  
+  <!--cubes-->
+  <rigidbodyvertex x="-0.12" y="-0.02" m="0.25"/>
+  <rigidbodyvertex x="-0.12" y="-0.12" m="0.25"/>
+  <rigidbodyvertex x="-0.02" y="-0.12" m="0.25"/>
+  <rigidbodyvertex x="-0.02" y="-0.02" m="0.25"/>
+  <rigidbody p="4" p="5" p="6" p="7" vx="-1" vy="-1" omega="0" r="0.01" fixed="0" />
+  
+  <rigidbodyvertex x="0.12" y="-0.02" m="0.25"/>
+  <rigidbodyvertex x="0.12" y="-0.12" m="0.25"/>
+  <rigidbodyvertex x="0.02" y="-0.12" m="0.25"/>
+  <rigidbodyvertex x="0.02" y="-0.02" m="0.25"/>
+  <rigidbody p="8" p="9" p="10" p="11" vx="1" vy="-1" omega="0" r="0.01" fixed="0" />
+  
+  <rigidbodyvertex x="0.12" y="0.02" m="0.25"/>
+  <rigidbodyvertex x="0.12" y="0.12" m="0.25"/>
+  <rigidbodyvertex x="0.02" y="0.12" m="0.25"/>
+  <rigidbodyvertex x="0.02" y="0.02" m="0.25"/>
+  <rigidbody p="12" p="13" p="14" p="15" vx="1" vy="1" omega="0" r="0.01" fixed="0" />
+  
+  <rigidbodyvertex x="-0.12" y="0.02" m="0.25"/>
+  <rigidbodyvertex x="-0.12" y="0.12" m="0.25"/>
+  <rigidbodyvertex x="-0.02" y="0.12" m="0.25"/>
+  <rigidbodyvertex x="-0.02" y="0.02" m="0.25"/>
+  <rigidbody p="16" p="17" p="18" p="19" vx="-1" vy="1" omega="0" r="0.01" fixed="0" />
+  
+    
+  
+</scene>

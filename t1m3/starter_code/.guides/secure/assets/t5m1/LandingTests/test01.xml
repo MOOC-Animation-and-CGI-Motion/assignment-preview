@@ -1,0 +1,36 @@
+<scene>
+  <simtype type="joint-motor-body"/>
+  <description text="Landing test 1: move the robot into the designated landing zone."/>
+
+  <maxsimfreq max="100.0"/>
+  <duration time="120.0"/>
+  <viewport cx="0.0" cy="3.0" size="4.0"/>
+  
+  <rigidbodyintegrator type="symplectic-euler" dt="0.01"/>
+
+  <rigidbodycollisionhandling detection="ground"/>
+
+  <rigidbodygravityforce fx="0" fy="-1.0"/>
+  
+  <!-- detectors -->
+  <detector type="mr-land-in-specified-zone" jointmotorbody="0" xmin="1.0" xmax="2.0" duration="30"/>
+  <detector type="mr-balance" jointmotorbody="0" duration="-1"/>
+  
+  <!-- link 0: head -->
+  <rigidbodyvertex x="0.25"  y="3.25" m="1"/>
+  <rigidbodyvertex x="-0.25"  y="3.25" m="1"/>
+  <rigidbodyvertex x="-0.25"  y="2.75" m="1"/>
+  <rigidbodyvertex x="0.25"  y="2.75" m="1"/>
+  <rigidbody p="0" p="1" p="2" p="3" vx="0.0" vy="0.0" omega="0.0" r="0.04"/>
+
+  <!-- link 1: foot -->
+  <rigidbodyvertex x="0.0"  y="1.0" m="0.1"/>
+  <rigidbody p="4" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <jointmotorbody type="monopod-robot">
+  	<legspring k="100" l0="2" l0min="1" l0max="3" b="2.0"/>
+  	<link body="0" parent="-1" axisx="0" axisy="0"/>
+  	<link body="1" parent="0"  axisx="0" axisy="3"/>
+  </jointmotorbody>
+
+</scene>

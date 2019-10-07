@@ -1,0 +1,18 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A single rigid body with no forces, constant linear momentum, no rotation. Should cross the screen in two simulation seconds; intended as a test of momentum."/>
+  <viewport cx="1.0" cy="0.0" size="2.1"/>
+  <maxsimfreq max="100.0"/>
+  <duration time="2.0"/>
+  
+  <rigidbodyintegrator type="explicit-euler" dt="0.01"/>
+
+  <!--Total mass = 10. Center of mass = <2/5,0>. I = 92/5.-->
+  <rigidbodyvertex x="-1" y="-1" m="1"/>
+  <rigidbodyvertex x="-1" y="1"  m="2"/>
+  <rigidbodyvertex x="1"  y="1"  m="3"/>
+  <rigidbodyvertex x="1"  y="-1" m="4"/>
+
+  <rigidbody p="0" p="1" p="2" p="3" vx="1.0" vy="0.0" omega="0.0" r="0.1"/>
+
+</scene>

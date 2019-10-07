@@ -1,0 +1,54 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="An articulated body constructed by attaching springs between rigid bodies. Intended as a test of multiple rigid bodies and multiple forces."/>
+  <duration time="100.0"/>
+  <maxsimfreq max="500000.0"/>
+  <viewport cx="0.0" cy="-2.0" size="5.2"/>
+
+  <rigidbodyintegrator type="symplectic-euler" dt="0.001"/>
+
+  <!-- First rigid body -->
+  <rigidbodyvertex x="0" y="0" m="1"/>
+  <rigidbodyvertex x="1" y="0" m="1"/>
+  <rigidbody p="0" p="1" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <!-- Second rigid body -->
+  <rigidbodyvertex x="1" y="0" m="1"/>
+  <rigidbodyvertex x="2" y="0" m="1"/>
+  <rigidbody p="2" p="3" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <!-- Third rigid body -->
+  <rigidbodyvertex x="2" y="0" m="1"/>
+  <rigidbodyvertex x="3" y="0" m="1"/>
+  <rigidbody p="4" p="5" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <!-- Fourth rigid body -->
+  <rigidbodyvertex x="3" y="0" m="1"/>
+  <rigidbodyvertex x="4" y="0" m="1"/>
+  <rigidbody p="6" p="7" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <!-- Fifth rigid body -->
+  <rigidbodyvertex x="4" y="0" m="1"/>
+  <rigidbodyvertex x="5" y="0" m="1"/>
+  <rigidbody p="8" p="9" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <!-- Force pinning down the first rigid body's endpoint -->
+  <rigidbodyspringforce i="-1" pix="0.0" piy="0.0" j="0" pjx="-0.5" pjy="0.0" k="1900000.0" l0="0.0"/>
+  <!-- Force connecting the first and second rigid bodies -->
+  <rigidbodyspringforce  i="0" pix="0.5" piy="0.0" j="1" pjx="-0.5" pjy="0.0" k="1900000.0" l0="0.0"/>
+  <!-- Force connecting the second and third rigid bodies -->
+  <rigidbodyspringforce  i="1" pix="0.5" piy="0.0" j="2" pjx="-0.5" pjy="0.0" k="1900000.0" l0="0.0"/>
+  <!-- Force connecting the fourth and fifth rigid bodies -->
+  <rigidbodyspringforce  i="2" pix="0.5" piy="0.0" j="3" pjx="-0.5" pjy="0.0" k="1900000.0" l0="0.0"/>
+  <!-- Force connecting the fifth and sixth rigid bodies -->
+  <rigidbodyspringforce  i="3" pix="0.5" piy="0.0" j="4" pjx="-0.5" pjy="0.0" k="1900000.0" l0="0.0"/>
+
+  <rigidbodygravityforce fx="0.0" fy="-1.0"/>
+  
+  <rigidbodycolor body="0" r="0.53139548040873541" g="0.16878516364719742" b="0.56272452286210517"/>
+  <rigidbodycolor body="1" r="0.12133043205506577" g="0.90512130661542445" b="0.92321563727227907"/>
+  <rigidbodycolor body="2" r="0.84117483600722964" g="0.40382602138791979" b="0.97227513879454286"/>
+  <rigidbodycolor body="3" r="0.50777669898760902" g="0.93408543550255507" b="0.29823045278877258"/>
+  <rigidbodycolor body="4" r="0.2340609309119871" g="0.24663158861700696" b="0.69064602360327632"/>
+
+</scene>
