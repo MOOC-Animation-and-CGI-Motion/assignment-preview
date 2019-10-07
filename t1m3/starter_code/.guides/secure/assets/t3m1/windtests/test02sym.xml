@@ -1,0 +1,39 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A number of rigid bodies moving in the direction of the windforce at a higher velocity than the wind force. These bodies slow down and reach the velocity of the wind."/>
+  <viewport cx="7.0" cy="6.0" size="9.1"/>
+  <duration time="14.0"/>
+  
+  <rigidbodyintegrator type="symplectic-euler" dt="0.01"/>
+
+  <rigidbodyvertex x="-1.0" y="-0.0" m="1"/>
+  <rigidbodyvertex x="-1.0" y=" 1.0" m="1"/>
+  <rigidbodyvertex x=" 1.0" y=" 1.0" m="1"/>
+  <rigidbodyvertex x=" 1.0" y="-0.0" m="1"/>
+
+  <rigidbody p="0" p="1" p="2" p="3" vx="2.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <rigidbodyvertex x="-1.0" y="2.0" m="1"/>
+  <rigidbodyvertex x="-1.0" y="4.0" m="1"/>
+  <rigidbodyvertex x=" 4.0" y="4.0" m="1"/>
+  <rigidbodyvertex x=" 4.0" y="2.0" m="1"/>
+
+  <rigidbody p="4" p="5" p="6" p="7" vx="2.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <rigidbodyvertex x="-1.0" y="5.0" m="1"/>
+  <rigidbodyvertex x="-1.0" y="7.0" m="1"/>
+  <rigidbodyvertex x=" 1.5" y="7.0" m="1"/>
+  <rigidbodyvertex x=" 1.5" y="5.0" m="1"/>
+
+  <rigidbody p="8" p="9" p="10" p="11" vx="2.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <rigidbodyvertex x="-1.0" y="8.0" m="1"/>
+  <rigidbodyvertex x="-1.0" y="12.0" m="1"/>
+  <rigidbodyvertex x=" 1.0" y="12.0" m="1"/>
+  <rigidbodyvertex x=" 1.0" y="8.0" m="1"/>
+
+  <rigidbody p="12" p="13" p="14" p="15" vx="2.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <rigidbodywindforce beta="1.0" fx="0.2" fy="0.0" pointsperedge="2" />
+
+</scene>

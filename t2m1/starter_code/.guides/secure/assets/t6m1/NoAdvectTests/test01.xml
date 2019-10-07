@@ -1,0 +1,9 @@
+
+<scene>
+  <simtype type="stable-fluids" advect="0"/>
+  <description text="No advection test"/>
+  <velocityfieldpattern code="1"/>
+  <duration time="0.3"/>
+  <diffusion diff="0.0"/>
+  <viscosity visc="0.0"/>
+</scene>

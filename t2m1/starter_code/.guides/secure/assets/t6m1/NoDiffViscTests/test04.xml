@@ -1,0 +1,9 @@
+
+<scene>
+  <simtype type="stable-fluids"/>
+  <description text="No diffusion or viscosity test"/>
+  <velocityfieldpattern code="7"/>
+  <duration time="0.3"/>
+  <diffusion diff="0.0"/>
+  <viscosity visc="0.0"/>
+</scene>

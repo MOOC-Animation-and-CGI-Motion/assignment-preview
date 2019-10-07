@@ -1,0 +1,50 @@
+<scene>
+  <description text="A helical spring."/>
+
+  <duration time="50.0"/>
+  <integrator type="implicit-euler" dt="0.1"/>
+  <maxsimfreq max="500.0"/>
+  
+  <simplegravity fx="0" fy="-0.1" />
+
+  <particle m="1.0" px="-0.5" py="-1.0" vx="0.0" vy="0.0" fixed="1"/>
+  <particle m="1.0" px=" 0.5" py="-0.8" vx="0.0" vy="0.0" fixed="1"/>
+  <particle m="1.0" px="-0.5" py="-0.6" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="1.0" px=" 0.5" py="-0.4" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="1.0" px="-0.5" py="-0.2" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="1.0" px=" 0.5" py=" 0.0" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="1.0" px="-0.5" py=" 0.2" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="1.0" px=" 0.5" py=" 0.4" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="1.0" px=" 0.0" py=" 0.5" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="50.0" px=" 0.0" py=" 0.9" vx="0.0" vy="0.0" fixed="0" radius="0.2"/>
+
+  <edge i="0" j="1" radius="0.07"/>
+  <edge i="1" j="2" radius="0.07"/>
+  <edge i="2" j="3" radius="0.07"/>
+  <edge i="3" j="4" radius="0.07"/>
+  <edge i="4" j="5" radius="0.07"/>
+  <edge i="5" j="6" radius="0.07"/>
+  <edge i="6" j="7" radius="0.07"/>
+  <edge i="7" j="8" radius="0.07"/>
+  <edge i="8" j="9" radius="0.07"/>
+
+  <elasticbodybendingforce i1="0" i2="1" i3="2" alpha="100.0" theta0="2.74680153" />
+  <elasticbodybendingforce i1="1" i2="2" i3="3" alpha="100.0" theta0="-2.74680153" />
+  <elasticbodybendingforce i1="2" i2="3" i3="4" alpha="100.0" theta0="2.74680153" />
+  <elasticbodybendingforce i1="3" i2="4" i3="5" alpha="100.0" theta0="-2.74680153" />
+  <elasticbodybendingforce i1="4" i2="5" i3="6" alpha="100.0" theta0="2.74680153" />
+  <elasticbodybendingforce i1="5" i2="6" i3="7" alpha="100.0" theta0="-2.74680153" />
+  <elasticbodybendingforce i1="6" i2="7" i3="8" alpha="100.0" theta0="2.74680153" />
+  <elasticbodybendingforce i1="7" i2="8" i3="9" alpha="100.0" theta0="-1.37340077" />
+
+  <elasticbodyspringforce i1="0" i2="1" alpha="100.0" l0="1.0198039" />
+  <elasticbodyspringforce i1="1" i2="2" alpha="100.0" l0="1.0198039" />
+  <elasticbodyspringforce i1="2" i2="3" alpha="100.0" l0="1.0198039" />
+  <elasticbodyspringforce i1="3" i2="4" alpha="100.0" l0="1.0198039" />
+  <elasticbodyspringforce i1="4" i2="5" alpha="100.0" l0="1.0198039" />
+  <elasticbodyspringforce i1="5" i2="6" alpha="100.0" l0="1.0198039" />
+  <elasticbodyspringforce i1="6" i2="7" alpha="100.0" l0="1.0198039" />
+  <elasticbodyspringforce i1="7" i2="8" alpha="100.0" l0="0.5099020" />
+  <elasticbodyspringforce i1="8" i2="9" alpha="100.0" l0="0.4" />
+  
+</scene>

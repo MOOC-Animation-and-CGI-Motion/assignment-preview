@@ -1,0 +1,18 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A rigid body launched into the air that should land in the lower right corner of the screen in roughly 4 seconds and undergo one complete revolution. Intended to verify that gravity exerts no net torque, and to benchmark the simulation against an analytical result."/>
+  <viewport cx="5.0" cy="1.0" size="5.6"/>
+  <maxsimfreq max="1000.0"/>
+  <duration time="4.0"/>
+
+  <rigidbodyintegrator type="symplectic-euler" dt="0.001"/>
+
+  <rigidbodyvertex x="-0.5" y="3.5" m="1"/>
+  <rigidbodyvertex x="-0.5" y="4.5" m="1"/>
+  <rigidbodyvertex x=" 0.5" y="4.5" m="1"/>
+  <rigidbodyvertex x=" 0.5" y="3.5" m="1"/>
+  <rigidbody p="0" p="1" p="2" p="3" vx="2.5" vy="2.0" omega="1.5707963267948966" r="0.1"/>
+
+  <rigidbodygravityforce fx="0.0" fy="-2.0"/>
+
+</scene>

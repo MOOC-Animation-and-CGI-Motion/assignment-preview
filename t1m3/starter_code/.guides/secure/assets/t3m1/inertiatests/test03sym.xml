@@ -1,0 +1,21 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A single rigid body with no forces, constant angular momentum, constant momentum. Should complete a single rotation in 2 seconds and should travel from bottom to top of screen in 4 seconds."/>
+  <viewport cx="0.0" cy="2.0" size="4.1"/>
+  <maxsimfreq max="100.0"/>
+  <duration time="4.0"/>
+  
+  <rigidbodyintegrator type="symplectic-euler" dt="0.01"/>
+
+  <!-- -->
+  <rigidbodyvertex x="-0.5" y="-2.0" m="0.5"/>
+  <rigidbodyvertex x="-0.5" y=" 0.0" m="1"/>
+  <rigidbodyvertex x="-1.5" y=" 0.0" m="1"/>
+  <rigidbodyvertex x=" 0.0" y=" 2.0" m="1"/>
+  <rigidbodyvertex x=" 1.5" y=" 0.0" m="1"/>
+  <rigidbodyvertex x=" 0.5" y=" 0.0" m="1"/>
+  <rigidbodyvertex x=" 0.5" y="-2.0" m="0.5"/>
+
+  <rigidbody p="0" p="1" p="2" p="3" p="4" p="5" p="6" vx="0.0" vy="1.0" omega="3.14159" r="0.1"/>
+
+</scene>

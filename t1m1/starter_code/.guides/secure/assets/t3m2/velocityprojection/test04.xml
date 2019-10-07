@@ -1,0 +1,91 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A spinning square hits a tightly-packed bundle of squares. The squares should scatter at many different angles towards the right."/>
+  <viewport cx="0.0" cy="0.0" size="12.0"/>
+  <maxsimfreq max="100000000.0"/>
+  <duration time="1.0"/>
+
+  <rigidbodyintegrator type="symplectic-euler" dt="0.001"/>
+
+  <rigidbodycollisionhandling detection="all-pairs" response="velocity-projection"/>
+
+  <!-- Rigid body serving as a 'table' -->
+
+  <rigidbodyvertex x="0" y="0.5" m="1"/>
+  <rigidbodyvertex x="0" y="-0.5" m="1"/>
+  <rigidbodyvertex x="1" y="-0.5" m="1"/>
+  <rigidbodyvertex x="1" y="0.5" m="1"/>
+
+  <rigidbody p="0" p="1" p="2" p="3" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="2" y="1.5" m="1"/>
+  <rigidbodyvertex x="2" y="0.5" m="1"/>
+  <rigidbodyvertex x="3" y="0.5" m="1"/>
+  <rigidbodyvertex x="3" y="1.5" m="1"/>
+
+  <rigidbody p="4" p="5" p="6" p="7" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="2" y="-1.5" m="1"/>
+  <rigidbodyvertex x="2" y="-0.5" m="1"/>
+  <rigidbodyvertex x="3" y="-0.5" m="1"/>
+  <rigidbodyvertex x="3" y="-1.5" m="1"/>
+
+  <rigidbody p="8" p="9" p="10" p="11" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="4" y="0.5" m="1"/>
+  <rigidbodyvertex x="4" y="-0.5" m="1"/>
+  <rigidbodyvertex x="5" y="-0.5" m="1"/>
+  <rigidbodyvertex x="5" y="0.5" m="1"/>
+
+  <rigidbody p="12" p="13" p="14" p="15" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="4" y="2.5" m="1"/>
+  <rigidbodyvertex x="4" y="1.5" m="1"/>
+  <rigidbodyvertex x="5" y="1.5" m="1"/>
+  <rigidbodyvertex x="5" y="2.5" m="1"/>
+
+  <rigidbody p="16" p="17" p="18" p="19" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="4" y="-2.5" m="1"/>
+  <rigidbodyvertex x="4" y="-1.5" m="1"/>
+  <rigidbodyvertex x="5" y="-1.5" m="1"/>
+  <rigidbodyvertex x="5" y="-2.5" m="1"/>
+
+  <rigidbody p="20" p="21" p="22" p="23" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="6" y="-1.5" m="1"/>
+  <rigidbodyvertex x="6" y="-0.5" m="1"/>
+  <rigidbodyvertex x="7" y="-0.5" m="1"/>
+  <rigidbodyvertex x="7" y="-1.5" m="1"/>
+
+  <rigidbody p="24" p="25" p="26" p="27" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="6" y="-3.5" m="1"/>
+  <rigidbodyvertex x="6" y="-2.5" m="1"/>
+  <rigidbodyvertex x="7" y="-2.5" m="1"/>
+  <rigidbodyvertex x="7" y="-3.5" m="1"/>
+
+  <rigidbody p="28" p="29" p="30" p="31" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="6" y="1.5" m="1"/>
+  <rigidbodyvertex x="6" y="0.5" m="1"/>
+  <rigidbodyvertex x="7" y="0.5" m="1"/>
+  <rigidbodyvertex x="7" y="1.5" m="1"/>
+
+  <rigidbody p="32" p="33" p="34" p="35" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="6" y="3.5" m="1"/>
+  <rigidbodyvertex x="6" y="2.5" m="1"/>
+  <rigidbodyvertex x="7" y="2.5" m="1"/>
+  <rigidbodyvertex x="7" y="3.5" m="1"/>
+
+  <rigidbody p="36" p="37" p="38" p="39" vx="0" vy="0" omega="0" r="0.5" fixed="0"/>
+
+  <rigidbodyvertex x="-4" y="0.5" m="10"/>
+  <rigidbodyvertex x="-4" y="-0.5" m="10"/>
+  <rigidbodyvertex x="-5" y="-0.5" m="10"/>
+  <rigidbodyvertex x="-5" y="0.5" m="10"/>
+ 
+  <rigidbody p="40" p="41" p="42" p="43" vx="100" vy="0" omega="100" r="0.5" fixed="0"/>
+
+</scene>

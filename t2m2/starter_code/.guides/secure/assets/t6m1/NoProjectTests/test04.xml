@@ -1,0 +1,9 @@
+
+<scene>
+  <simtype type="stable-fluids" project="0"/>
+  <description text="No projection test"/>
+  <velocityfieldpattern code="8"/>
+  <duration time="0.3"/>
+  <diffusion diff="0.0"/>
+  <viscosity visc="0.0"/>
+</scene>

@@ -1,0 +1,32 @@
+<scene>
+  <simtype type="rigid-body"/>
+  <description text="A rectangle bounces on a second rectangle fixed to the background with springs. After each bounce the first rectangle should reverse direction, with no rotation. The amplitude of the bouncing should decrease over time."/>
+  <!--<viewport cx="1.0" cy="0.0" size="2.1"/>-->
+  <maxsimfreq max="100000000.0"/>
+  <duration time="10.0"/>
+
+  <rigidbodyintegrator type="symplectic-euler" dt="0.001"/>
+
+  <rigidbodycollisionhandling detection="all-pairs" response="lcp"/>
+
+  <!-- Rigid body falling under gravity -->
+  <rigidbodyvertex x="0.5" y="4.0" m="8"/>
+  <rigidbodyvertex x="0.5" y="6.0" m="8"/>
+  <rigidbodyvertex x="1.5" y="6.0" m="8"/>
+  <rigidbodyvertex x="1.5" y="4.0" m="8"/>
+
+  <!-- Motionless rigid body -->
+  <rigidbodyvertex x="0.0" y="0.0" m="1"/>
+  <rigidbodyvertex x="0.0" y="2.0" m="1"/>
+  <rigidbodyvertex x="2.0" y="2.0" m="1"/>
+  <rigidbodyvertex x="2.0" y="0.0" m="1"/>
+
+  <rigidbody p="0" p="1" p="2" p="3" vx="0.0" vy="-2.0" omega="0.0" r="0.1"/>
+  <rigidbody p="4" p="5" p="6" p="7" vx="0.0" vy="0.0" omega="0.0" r="0.1"/>
+
+  <rigidbodygravityforce fx="0.0" fy="-2.0"/>
+
+  <rigidbodyspringforce i="1" pix="1.0"  piy="1.0" j="-1" pjx="2.0" pjy="2.0" k="1000.0" l0="0.0"/>
+  <rigidbodyspringforce i="1" pix="-1.0" piy="1.0" j="-1" pjx="0.0" pjy="2.0" k="1000.0" l0="0.0"/>
+
+</scene>

@@ -1,0 +1,17 @@
+<scene>
+  <description text="A right triangle, rotated. The elastic force should be zero since the strain tensor is rotational invariant."/>
+
+  <duration time="50.0"/>
+  <integrator type="implicit-euler" dt="0.1"/>
+  <maxsimfreq max="500.0"/>
+
+  <particle m="1.0" px="0.0" py="0.0" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="1.0" px=" 0.70710678" py=" 0.70710678" vx="0.0" vy="0.0" fixed="0"/>
+  <particle m="1.0" px="-0.70710678" py=" 0.70710678" vx="0.0" vy="0.0" fixed="0"/>
+
+  <edge i="0" j="1"/>
+  <edge i="1" j="2"/>
+  <edge i="2" j="0"/>
+  <elasticbodycstforce i1="0" i2="1" i3="2" youngsmodulus="1.0" poissonratio="0.0" xb1x="0" xb1y="0" xb2x="1" xb2y="0" xb3x="0" xb3y="1"/>
+  
+</scene>
